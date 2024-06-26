@@ -4,8 +4,10 @@ const TodoInput = (props) => {
     const {handleAddTodos, todoValue, setTodoValue} = props
 
     const addTodo = () => {
-        handleAddTodos(todoValue)
-        setTodoValue('')
+        if(todoValue) {
+            handleAddTodos(todoValue)
+            setTodoValue('')
+        }
     }
 
     const handleKeyDown = (e) => {
